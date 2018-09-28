@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--title-->
+		<title>SVG Pie Chart</title>
+		<!--style sheets-->
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/chart.css" rel="stylesheet"/>
+		<!--javascript-->
+		<script src="js/main.js"></script>
+		<script src="js/svg.js"></script>
+		<!--metadata-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+	</head>
+	<body onload="init();">
+		<header>
+			<div id="menuicon"><img src="images/menu.png"/></div>
+			<div id="headertext">Pie Chart</div>
+		</header>
+		<div id="content">
+			<div id="chart">
+				<svg id="svgchart">
+					<!-- x = cx + (sin(p * 3.6) * r) -->
+					<!-- y = cy - (cos(p * 3.6) * r) -->
+					<circle class="circle" cx="200" cy="200" r="150"/>
+					<path class="slice" d="M200,200 L200, 50 A150,150 0 0,1 342.6,153.6 Z"/>
+					<!-- 40 -->
+					<circle class="circle" cx="500" cy="200" r="150"/>
+					<path class="slice" d="M500,200 L500, 50 A150,150 0 0,1 588.2,321.4 Z"/>
+					<!-- 60 -->
+					<circle class="circle" cx="200" cy="500" r="150"/>
+					<path class="slice" d="M200,500 L200, 350 A150,150 0 1,1 111.8,621.4 Z"/>
+					<!-- 80 -->
+					<circle class="circle" cx="500" cy="500" r="150"/>
+					<path class="slice" d="M500,500 L500, 350 A150,150 0 1,1 357.8,453.35 Z"/>
+				</svg>
+			</div>
+		</div>
+		<script>
+			// console.log(drawSlice(60));
+		</script>
+	</body>
+</html>
